@@ -18,7 +18,7 @@ func main()  {
 		fmt.Print("Create error:",error)
 		return
 	}
-	buf := make([]byte,4096)
+	buf := make([]byte,4096)//MMU,最小单位是4K
 	for{
 		n,error :=  file_reader.Read(buf)
 		if n==0 || error == io.EOF{
